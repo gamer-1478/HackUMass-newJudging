@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "ejs": "^3.1.10",
+    "json2csv": "^6.0.0-alpha.2"
+  },
+  "name": "judingnew",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judge Page</title>
+    <style>
+        /* Set up A4 page size */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Table styling */
+        .judgePage {
+            width: 210mm;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* To fit within A4 width with margin */
+            margin: 10px;
+        }
+
+        .judgeName {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 97%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid #000;
+            text-align: left;
+            font-size: 21px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="judgePage">
+        <p class="judgeName">Judge: <%= judge %></p>
+        <img src="QRCode.png" alt="S" width="120" height="120">
+        <br>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Team Table</th>
+                    <th>Team Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows -->
+                <% for (let i=0; i < totalLen; i++) { %>
+                    <tr>
+                        <td><%= tableNames[i] %>
+                        </td>
+                        <td>Table <%= tables[i] %>
+                        </td>
+                        <td><%= tableCategories[(i)]%>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
